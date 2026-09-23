@@ -1,0 +1,646 @@
+.header {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  color: #ffffff;
+}
+
+.header__inner {
+  position: relative;
+  isolation: isolate;
+
+  width: min(1200px, calc(100% - 48px));
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 0 18px 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  /* Barra transparente */
+  background: rgba(10, 20, 30, 0.28);
+
+  /* Efeito de vidro */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  /* Contorno base */
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Brilho que percorre o contorno */
+.header__inner::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+
+  padding: 1px;
+  border-radius: 19px;
+
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    transparent 300deg,
+    rgba(82, 195, 255, 0.15) 320deg,
+    rgba(135, 220, 255, 0.9) 340deg,
+    #ffffff 350deg,
+    rgba(82, 195, 255, 0.9) 358deg,
+    transparent 360deg
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+  animation: header-border-spin 7s linear infinite;
+
+  filter: drop-shadow(0 0 5px rgba(82, 195, 255, 0.55));
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes header-border-spin {
+  from {
+    --border-angle: 0deg;
+  }
+
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  display: block;
+  width: auto;
+  height: 46px;
+  object-fit: contain;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.header__nav a {
+  position: relative;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  transition: color 180ms ease;
+}
+
+.header__nav a:hover {
+  color: #ffffff;
+}
+
+.header__contact {
+  min-height: 42px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.header__contact:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.header__contact span {
+  font-size: 16px;
+  line-height: 1;
+} .header {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  color: #ffffff;
+}
+
+.header__inner {
+  position: relative;
+  isolation: isolate;
+
+  width: min(1200px, calc(100% - 48px));
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 0 18px 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  background: rgba(10, 20, 30, 0.28);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   BORDA ANIMADA
+========================= */
+
+.header__inner::before {
+  content: '';
+
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+
+  padding: 1px;
+  border-radius: 19px;
+
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    transparent 300deg,
+    rgba(82, 195, 255, 0.15) 320deg,
+    rgba(135, 220, 255, 0.9) 340deg,
+    #ffffff 350deg,
+    rgba(82, 195, 255, 0.9) 358deg,
+    transparent 360deg
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+  animation: header-border-spin 7s linear infinite;
+
+  filter:
+    drop-shadow(0 0 5px rgba(82, 195, 255, 0.55));
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes header-border-spin {
+  from {
+    --border-angle: 0deg;
+  }
+
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.header__logo {
+  position: relative;
+  z-index: 5;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  display: block;
+
+  width: auto;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   NAVEGAÇÃO DESKTOP
+========================= */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.header__nav a {
+  position: relative;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  transition: color 180ms ease;
+}
+
+.header__nav a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   CONTATO DESKTOP
+========================= */
+
+.header__contact {
+  min-height: 42px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.header__contact:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.header__contact span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* =========================
+   ELEMENTOS MOBILE
+========================= */
+
+.header__toggle,
+.header__mobile-menu {
+  display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .header {
+    top: 14px;
+  }
+
+  .header__inner {
+    width: calc(100% - 28px);
+    min-height: 62px;
+
+    padding: 0 10px 0 17px;
+
+    gap: 0;
+
+    border-radius: 17px;
+
+    background: rgba(6, 17, 27, 0.68);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+      border-radius 300ms ease,
+      background 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .header__inner::before {
+    border-radius: 18px;
+  }
+
+  .header__logo img {
+    height: 40px;
+  }
+
+  /* ESCONDE O DESKTOP */
+
+  .header__nav,
+  .header__contact {
+    display: none;
+  }
+
+  /* =========================
+     HAMBÚRGUER
+  ========================= */
+
+  .header__toggle {
+    position: relative;
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    cursor: pointer;
+
+    transition:
+      background 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .header__toggle span {
+    width: 17px;
+    height: 1.5px;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition:
+      transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 200ms ease;
+  }
+
+  .header__toggle:hover {
+    background: rgba(255, 255, 255, 0.11);
+    border-color: rgba(105, 200, 255, 0.45);
+  }
+
+  /* X QUANDO ABERTO */
+
+  .header--open .header__toggle span:first-child {
+    transform:
+      translateY(3.75px)
+      rotate(45deg);
+  }
+
+  .header--open .header__toggle span:last-child {
+    transform:
+      translateY(-3.75px)
+      rotate(-45deg);
+  }
+
+  /* =========================
+     PAINEL MOBILE
+  ========================= */
+
+  .header__mobile-menu {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+
+    width: 100%;
+    padding: 14px;
+
+    display: block;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+
+    background: rgba(5, 16, 26, 0.94);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+      0 24px 55px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+      translateY(-10px)
+      scale(0.98);
+
+    transform-origin: top center;
+
+    pointer-events: none;
+
+    transition:
+      opacity 260ms ease,
+      visibility 260ms ease,
+      transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .header--open .header__mobile-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    pointer-events: auto;
+  }
+
+  /* =========================
+     LINKS MOBILE
+  ========================= */
+
+  .header__mobile-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__mobile-nav a {
+    min-height: 53px;
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+    font-weight: 400;
+
+    transition:
+      color 180ms ease,
+      padding-left 220ms ease,
+      background 180ms ease;
+  }
+
+  .header__mobile-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .header__mobile-nav a > span {
+    width: 22px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+
+    color: #69c8ff;
+  }
+
+  .header__mobile-nav a:hover {
+    padding-left: 17px;
+
+    background: rgba(105, 200, 255, 0.05);
+
+    color: #ffffff;
+  }
+
+  /* =========================
+     CTA MOBILE
+  ========================= */
+
+  .header__mobile-contact {
+    min-height: 54px;
+    margin-top: 10px;
+    padding: 0 9px 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(74, 191, 255, 0.5);
+    border-radius: 999px;
+
+    background: rgba(12, 128, 191, 0.22);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .header__mobile-contact strong {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #118fd0;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    box-shadow:
+      0 0 18px rgba(17, 143, 208, 0.25);
+  }
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 420px) {
+  .header__inner {
+    width: calc(100% - 22px);
+  }
+
+  .header__logo img {
+    height: 37px;
+  }
+
+  .header__toggle {
+    width: 40px;
+    height: 40px;
+  }
+}

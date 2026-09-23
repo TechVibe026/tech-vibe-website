@@ -1,0 +1,526 @@
+.process {
+  position: relative;
+  width: 100%;
+  padding: 120px 0 130px;
+
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(18, 126, 190, 0.13),
+      transparent 32%
+    ),
+    #071019;
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.process__container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.process__intro {
+  padding-bottom: 90px;
+}
+
+.process__eyebrow {
+  margin: 0 0 36px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+
+  color: #56c7ff;
+}
+
+.process__intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 90px;
+
+  align-items: end;
+}
+
+.process__title {
+  max-width: 700px;
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.process__title span {
+  display: block;
+  color: #83c9ee;
+}
+
+/* Texto lateral */
+
+.process__description {
+  position: relative;
+
+  max-width: 390px;
+
+  margin: 0 0 4px;
+  padding: 20px 0 20px 24px;
+
+  border-left: 1px solid rgba(86, 199, 255, 0.55);
+
+  font-size: 15px;
+  line-height: 1.75;
+
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.process__description::before {
+  content: '';
+
+  position: absolute;
+
+  left: -2px;
+  top: 20px;
+
+  width: 3px;
+  height: 38px;
+
+  border-radius: 999px;
+
+  background: #56c7ff;
+
+  box-shadow:
+    0 0 10px rgba(86, 199, 255, 0.8),
+    0 0 24px rgba(86, 199, 255, 0.35);
+}
+
+/* =========================
+   ETAPAS
+========================= */
+
+.process__steps {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* =========================
+   NEON PERCORRENDO A LINHA
+========================= */
+
+.process__steps::after {
+  content: '';
+
+  position: absolute;
+
+  top: -2px;
+  left: 0;
+
+  width: 18%;
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 194, 255, 0.2) 20%,
+    #42c4ff 65%,
+    #b8ebff 82%,
+    transparent 100%
+  );
+
+  filter: drop-shadow(0 0 5px #42c4ff)
+          drop-shadow(0 0 12px rgba(66, 196, 255, 0.75));
+
+  animation: process-line 4.5s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+@keyframes process-line {
+  0% {
+    left: -15%;
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 97%;
+    opacity: 0;
+  }
+}
+
+/* =========================
+   CADA ETAPA
+========================= */
+
+.process__step {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 34px 32px 30px 0;
+
+  transition:
+    background 350ms ease,
+    transform 350ms ease;
+}
+
+.process__step:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.process__step:not(:first-child) {
+  padding-left: 32px;
+}
+
+/* Glow atrás do card */
+
+.process__step::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      circle at 30% 15%,
+      rgba(51, 184, 255, 0.13),
+      transparent 55%
+    );
+
+  transition: opacity 350ms ease;
+
+  pointer-events: none;
+}
+
+.process__step:hover::after {
+  opacity: 1;
+}
+
+/* Faz o conteúdo ficar acima do glow */
+
+.process__step > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   PONTOS DA LINHA
+========================= */
+
+.process__step::before {
+  content: '';
+
+  position: absolute;
+
+  top: -5px;
+  left: 0;
+
+  z-index: 6;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #071019;
+
+  border: 1px solid rgba(111, 205, 255, 0.8);
+
+  box-shadow:
+    0 0 0 4px rgba(71, 183, 242, 0.06);
+
+  transition:
+    background 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.process__step:not(:first-child)::before {
+  left: 32px;
+}
+
+.process__step:hover::before {
+  background: #70d2ff;
+
+  transform: scale(1.2);
+
+  box-shadow:
+    0 0 8px #70d2ff,
+    0 0 18px rgba(70, 195, 255, 0.8),
+    0 0 32px rgba(70, 195, 255, 0.35);
+}
+
+/* =========================
+   NÚMERO
+========================= */
+
+.process__number {
+  display: block;
+
+  margin-bottom: 64px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+
+  color: #69c8ff;
+
+  transition:
+    color 250ms ease,
+    text-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.process__step:hover .process__number {
+  color: #b7eaff;
+
+  text-shadow:
+    0 0 8px rgba(79, 199, 255, 0.8),
+    0 0 20px rgba(79, 199, 255, 0.45);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.process__step h3 {
+  max-width: 230px;
+  margin: 0;
+
+  font-size: clamp(23px, 2vw, 30px);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+
+  transition:
+    transform 350ms ease,
+    text-shadow 350ms ease;
+}
+
+.process__step h3 span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  transition: color 350ms ease;
+}
+
+.process__step:hover h3 {
+  transform: translateY(-3px);
+
+  text-shadow:
+    0 0 24px rgba(92, 199, 255, 0.12);
+}
+
+.process__step:hover h3 span {
+  color: #80cfee;
+}
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.process__step p {
+  max-width: 230px;
+
+  margin: 24px 0 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  transition:
+    color 350ms ease,
+    transform 350ms ease;
+}
+
+.process__step:hover p {
+  color: rgba(255, 255, 255, 0.72);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .process {
+    padding: 78px 0 82px;
+  }
+
+  .process__container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  /* INTRO */
+
+  .process__intro {
+    padding-bottom: 54px;
+  }
+
+  .process__eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .process__intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .process__title {
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 1;
+  }
+
+  .process__description {
+    max-width: 100%;
+
+    margin: 0;
+    padding: 15px 0 15px 20px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .process__description::before {
+    top: 15px;
+    height: 32px;
+  }
+
+  /* =========================
+     ETAPAS
+  ========================= */
+
+  .process__steps {
+    grid-template-columns: 1fr;
+
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Neon vertical */
+
+  .process__steps::after {
+    top: 0;
+    left: -2px;
+
+    width: 3px;
+    height: 18%;
+
+    background: linear-gradient(
+      180deg,
+      transparent,
+      #42c4ff,
+      #b8ebff,
+      transparent
+    );
+
+    animation: process-line-mobile 4.5s ease-in-out infinite;
+  }
+
+  @keyframes process-line-mobile {
+    0% {
+      top: -10%;
+      opacity: 0;
+    }
+
+    8% {
+      opacity: 1;
+    }
+
+    92% {
+      opacity: 1;
+    }
+
+    100% {
+      top: 95%;
+      opacity: 0;
+    }
+  }
+
+  /* =========================
+     CADA ETAPA
+  ========================= */
+
+  .process__step,
+  .process__step:not(:first-child) {
+    min-height: auto;
+
+    padding: 0 0 48px 28px;
+
+    border-right: 0;
+  }
+
+  .process__step:last-child {
+    padding-bottom: 0;
+  }
+
+  .process__step::before,
+  .process__step:not(:first-child)::before {
+    top: 2px;
+    left: -5px;
+  }
+
+  /* NÚMERO */
+
+  .process__number {
+    margin-bottom: 19px;
+
+    font-size: 11px;
+  }
+
+  /* TÍTULO */
+
+  .process__step h3 {
+    max-width: 100%;
+
+    font-size: clamp(27px, 8vw, 34px);
+    line-height: 1.05;
+  }
+
+  /* DESCRIÇÃO */
+
+  .process__step p {
+    max-width: 100%;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}

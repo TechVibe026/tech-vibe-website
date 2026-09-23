@@ -1,0 +1,1028 @@
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+  padding: 105px 0 110px;
+  display: flex;
+  align-items: center;
+
+  background-color: #f5f8fb;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #101820;
+  overflow: hidden;
+}
+
+.contact__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.contact__left {
+  max-width: 670px;
+}
+
+.contact__eyebrow {
+  margin: 0 0 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #54788e;
+}
+
+.contact__eyebrow > span {
+  width: 26px;
+  height: 1px;
+  display: block;
+  background: #159ce0;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.contact__title {
+  margin: 0;
+
+  font-size: clamp(46px, 4.8vw, 68px);
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+
+  color: #111b22;
+}
+
+.contact__title > span {
+  display: block;
+  margin-top: 7px;
+  color: #158fcf;
+}
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.contact__description {
+  max-width: 560px;
+  margin: 30px 0 0;
+
+  font-size: 15px;
+  line-height: 1.75;
+
+  color: #667985;
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.contact__benefits {
+  margin-top: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.contact__benefit {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.contact__benefit-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(44, 139, 193, 0.16);
+
+  box-shadow:
+    0 8px 20px rgba(29, 79, 108, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.contact__benefit-icon svg {
+  width: 16px;
+  height: 16px;
+
+  fill: none;
+  stroke: #178dca;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact__benefit:nth-child(2) .contact__benefit-icon svg {
+  fill: #178dca;
+  stroke: #178dca;
+}
+
+.contact__benefit > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contact__benefit strong {
+  white-space: nowrap;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #20313b;
+}
+
+.contact__benefit > div:last-child > span {
+  font-size: 9px;
+  line-height: 1.3;
+  color: #81909a;
+}
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.contact__right {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  justify-self: end;
+  padding-top: 50px;
+}
+
+/* =========================
+   ESCOLHA SEU CANAL
+========================= */
+
+.contact__hint {
+  position: absolute;
+  top: -13px;
+  right: 24px;
+
+  display: flex;
+  align-items: flex-start;
+
+  color: #6d8594;
+
+  transform: rotate(-3deg);
+}
+
+.contact__hint > span {
+  margin-top: 1px;
+
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.contact__hint svg {
+  width: 66px;
+  height: 42px;
+  margin-left: 4px;
+
+  fill: none;
+  stroke: #75a7c3;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.contact__menu {
+  position: relative;
+  width: 100%;
+
+  /*
+    Espaço reservado para as redes.
+    Ao abrir, nada da página se move.
+  */
+  min-height: 355px;
+}
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
+
+.contact__button {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  min-height: 76px;
+  padding: 0 14px 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(97, 206, 255, 0.72);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30, 168, 231, 0.96) 0%,
+      #087fbe 100%
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 18px 42px rgba(0, 124, 190, 0.19),
+    0 5px 12px rgba(0, 102, 160, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 0 rgba(0, 70, 110, 0.14);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.contact__button::before {
+  content: '';
+
+  position: absolute;
+  inset: 3px;
+
+  border-radius: inherit;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  pointer-events: none;
+}
+
+.contact__button-text {
+  position: relative;
+  z-index: 2;
+
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* =========================
+   SETA DO BOTÃO
+========================= */
+
+.contact__button-arrow {
+  position: relative;
+  z-index: 2;
+
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  transition:
+    transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background 250ms ease;
+}
+
+/* =========================
+   REFLEXO / ESPELHADO
+========================= */
+
+.contact__button-shine {
+  position: absolute;
+  z-index: 1;
+
+  top: -90%;
+  left: -35%;
+
+  width: 22%;
+  height: 280%;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+
+  transform: rotate(20deg);
+  filter: blur(2px);
+
+  animation: contact-shine 4.2s ease-in-out infinite;
+}
+
+@keyframes contact-shine {
+  0% {
+    left: -35%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  32% {
+    left: 120%;
+    opacity: 0.9;
+  }
+
+  42%,
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+/* =========================
+   HOVER BOTÃO
+========================= */
+
+.contact__button:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(141, 225, 255, 0.95);
+
+  box-shadow:
+    0 22px 48px rgba(0, 124, 190, 0.25),
+    0 0 28px rgba(45, 187, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.contact__button:hover .contact__button-arrow {
+  transform: translateX(3px) rotate(-45deg);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================
+   BOTÃO ABERTO
+========================= */
+
+.contact__menu--open .contact__button {
+  box-shadow:
+    0 20px 46px rgba(0, 124, 190, 0.25),
+    0 0 30px rgba(53, 192, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.contact__menu--open .contact__button-arrow {
+  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   CONEXÕES
+========================= */
+
+.contact__connections {
+  position: absolute;
+
+  top: 75px;
+  left: 0;
+
+  width: 100%;
+  height: 125px;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+.contact__connection-base,
+.contact__connection-glow {
+  fill: none;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact__connection-base {
+  stroke: rgba(71, 142, 181, 0.25);
+  stroke-width: 1.2;
+
+  opacity: 0;
+
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+}
+
+.contact__connection-glow {
+  stroke: #55caff;
+  stroke-width: 2;
+
+  opacity: 0;
+
+  filter:
+    drop-shadow(0 0 3px rgba(66, 199, 255, 0.9))
+    drop-shadow(0 0 7px rgba(66, 199, 255, 0.45));
+
+  stroke-dasharray: 22 900;
+  stroke-dashoffset: 0;
+}
+
+/* DESENHA AS LINHAS */
+
+.contact__menu--open .contact__connection-base {
+  opacity: 1;
+
+  animation:
+    contact-draw-line 750ms
+    cubic-bezier(0.4, 0, 0.2, 1)
+    forwards;
+}
+
+@keyframes contact-draw-line {
+  from {
+    stroke-dashoffset: 900;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* LUZ CORRENDO NAS CONEXÕES */
+
+.contact__menu--open .contact__connection-glow {
+  opacity: 1;
+
+  animation:
+    contact-line-glow 2.8s linear 700ms infinite;
+}
+
+@keyframes contact-line-glow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -920;
+  }
+}
+
+/* =========================
+   CANAIS
+========================= */
+
+.contact__channels {
+  position: absolute;
+
+  top: 178px;
+  left: 0;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+/* =========================
+   CANAL INDIVIDUAL
+========================= */
+
+.contact__channel {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #172832;
+
+  opacity: 0;
+
+  transform:
+    translateY(-12px)
+    scale(0.55);
+
+  transform-origin: top center;
+
+  pointer-events: none;
+}
+
+/* =========================
+   APARECER UM POR VEZ
+========================= */
+
+.contact__menu--open .contact__channel {
+  pointer-events: auto;
+
+  animation:
+    contact-channel-pop
+    560ms
+    cubic-bezier(0.16, 1.35, 0.3, 1)
+    forwards;
+}
+
+.contact__menu--open .contact__channel:nth-child(1) {
+  animation-delay: 420ms;
+}
+
+.contact__menu--open .contact__channel:nth-child(2) {
+  animation-delay: 570ms;
+}
+
+.contact__menu--open .contact__channel:nth-child(3) {
+  animation-delay: 720ms;
+}
+
+@keyframes contact-channel-pop {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(-12px)
+      scale(0.55);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(3px)
+      scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* =========================
+   BOLINHAS
+========================= */
+
+.contact__channel-circle {
+  position: relative;
+
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255, 255, 255, 0.88);
+
+  box-shadow:
+    0 14px 30px rgba(18, 60, 84, 0.13),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 260ms ease;
+}
+
+.contact__channel-circle svg {
+  width: 32px;
+  height: 32px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* WHATSAPP */
+
+.contact__channel--whatsapp .contact__channel-circle {
+  background: #25d366;
+
+  box-shadow:
+    0 14px 30px rgba(37, 211, 102, 0.2),
+    0 0 20px rgba(37, 211, 102, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* INSTAGRAM */
+
+.contact__channel--instagram .contact__channel-circle {
+  background:
+    linear-gradient(
+      135deg,
+      #833ab4 0%,
+      #c13584 35%,
+      #e1306c 58%,
+      #f77737 78%,
+      #fcaf45 100%
+    );
+
+  box-shadow:
+    0 14px 30px rgba(193, 53, 132, 0.2),
+    0 0 20px rgba(225, 48, 108, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* EMAIL */
+
+.contact__channel--email .contact__channel-circle {
+  background: #168fd1;
+
+  box-shadow:
+    0 14px 30px rgba(22, 143, 209, 0.2),
+    0 0 20px rgba(22, 143, 209, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   TEXTO ABAIXO DAS BOLINHAS
+========================= */
+
+.contact__channel-label {
+  width: 100%;
+  max-width: 145px;
+
+  margin-top: 13px;
+  padding: 10px 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  border: 1px solid rgba(31, 96, 132, 0.1);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 9px 25px rgba(24, 63, 84, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    background 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.contact__channel-label strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: #243640;
+}
+
+.contact__channel-label span {
+  white-space: nowrap;
+
+  font-size: 9px;
+  color: #81909a;
+}
+
+/* =========================
+   HOVER REDES
+========================= */
+
+.contact__channel:hover .contact__channel-circle {
+  transform: translateY(-5px) scale(1.06);
+}
+
+.contact__channel--whatsapp:hover .contact__channel-circle {
+  box-shadow:
+    0 18px 34px rgba(37, 211, 102, 0.27),
+    0 0 28px rgba(37, 211, 102, 0.25);
+}
+
+.contact__channel--instagram:hover .contact__channel-circle {
+  box-shadow:
+    0 18px 34px rgba(193, 53, 132, 0.25),
+    0 0 28px rgba(225, 48, 108, 0.22);
+}
+
+.contact__channel--email:hover .contact__channel-circle {
+  box-shadow:
+    0 18px 34px rgba(22, 143, 209, 0.27),
+    0 0 28px rgba(22, 143, 209, 0.22);
+}
+
+.contact__channel:hover .contact__channel-label {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 12px 28px rgba(24, 63, 84, 0.1);
+}
+
+/* =========================
+   NOTA FINAL
+========================= */
+
+.contact__note {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  transform: translateX(-50%);
+}
+
+.contact__note p {
+  margin: 0;
+
+  white-space: nowrap;
+
+  font-size: 10px;
+  color: #84939c;
+}
+
+.contact__note > span {
+  width: 42px;
+  height: 1px;
+
+  background: rgba(87, 121, 141, 0.25);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .contact {
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .contact__left {
+    max-width: 700px;
+  }
+
+  .contact__right {
+    width: min(100%, 540px);
+    max-width: none;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 72px 0 68px;
+    background-position: 58% center;
+  }
+
+  .contact__container {
+    width: min(100% - 32px, 1200px);
+    gap: 42px;
+  }
+
+  /* =========================
+     TEXTO
+  ========================= */
+
+  .contact__eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .contact__title {
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 0.98;
+  }
+
+  .contact__description {
+    max-width: 100%;
+    margin-top: 22px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     BENEFÍCIOS
+  ========================= */
+
+  .contact__benefits {
+    margin-top: 30px;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .contact__benefit {
+    min-width: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+  }
+
+  .contact__benefit-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact__benefit-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .contact__benefit > div:last-child {
+    gap: 3px;
+  }
+
+  .contact__benefit strong {
+    white-space: normal;
+
+    font-size: 10px;
+    line-height: 1.25;
+  }
+
+  .contact__benefit > div:last-child > span {
+    font-size: 8px;
+    line-height: 1.35;
+  }
+
+  /* =========================
+     ÁREA DE CONTATO
+  ========================= */
+
+  .contact__right {
+    width: 100%;
+    padding-top: 38px;
+  }
+
+  .contact__hint {
+    top: -10px;
+    right: 8px;
+  }
+
+  .contact__hint > span {
+    font-size: 11px;
+  }
+
+  .contact__hint svg {
+    width: 56px;
+    height: 36px;
+  }
+
+  .contact__menu {
+    min-height: 300px;
+  }
+
+  /* =========================
+     BOTÃO
+  ========================= */
+
+  .contact__button {
+    min-height: 64px;
+    padding: 0 10px 0 21px;
+    gap: 14px;
+  }
+
+  .contact__button-text {
+    font-size: 15px;
+  }
+
+  .contact__button-arrow {
+    width: 42px;
+    height: 42px;
+
+    font-size: 19px;
+  }
+
+  /* =========================
+     CONEXÕES
+  ========================= */
+
+  .contact__connections {
+    top: 63px;
+    height: 103px;
+  }
+
+  /* =========================
+     CANAIS
+  ========================= */
+
+  .contact__channels {
+    top: 151px;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .contact__channel-circle {
+    width: 58px;
+    height: 58px;
+
+    border-width: 3px;
+  }
+
+  .contact__channel-circle svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact__channel-label {
+    width: 100%;
+    max-width: 100px;
+
+    margin-top: 10px;
+    padding: 8px 3px;
+  }
+
+  .contact__channel-label strong {
+    font-size: 9px;
+  }
+
+  .contact__channel-label span {
+    font-size: 7px;
+  }
+
+  /* =========================
+     NOTA FINAL
+  ========================= */
+
+  .contact__note {
+    gap: 7px;
+  }
+
+  .contact__note > span {
+    width: 15px;
+  }
+
+  .contact__note p {
+    white-space: normal;
+
+    text-align: center;
+
+    font-size: 8px;
+    line-height: 1.4;
+  }
+}
