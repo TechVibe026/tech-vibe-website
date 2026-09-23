@@ -1,5 +1,5 @@
 import './Hero.css'
-import heroBackground from '../../assets/hero/hero-background.png'
+import heroBackground from '../../assets/hero/hero-background.webp'
 
 function Hero() {
   return (

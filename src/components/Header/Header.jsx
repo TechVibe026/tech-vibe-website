@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Header.css'
 
-import techVibeLogo from '../../assets/logo/tech-vibe-logo.png'
+import techVibeLogo from '../../assets/logo/tech-vibe-logo.webp'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)

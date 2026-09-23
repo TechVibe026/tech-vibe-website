@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Contact.css'
 
-import contactBackground from '../../assets/contact/contact-background.png'
+import contactBackground from '../../assets/contact/contact-background.webp'
 
 function Contact() {
   const [contactOpen, setContactOpen] = useState(false)

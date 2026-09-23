@@ -1,8 +1,8 @@
 import './Solutions.css'
 
-import sistemaSobMedida from '../../assets/solutions/sistema-sob-medida.png'
-import automacoes from '../../assets/solutions/automacoes.png'
-import sitesExperiencias from '../../assets/solutions/sites-experiencias.png'
+import sistemaSobMedida from '../../assets/solutions/sistema-sob-medida.webp'
+import automacoes from '../../assets/solutions/automacoes.webp'
+import sitesExperiencias from '../../assets/solutions/sites-experiencias.webp'
 
 function Solutions() {
   return (

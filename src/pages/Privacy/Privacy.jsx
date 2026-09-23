@@ -1,5 +1,5 @@
 import './Privacy.css'
-import legalBackground from '../../assets/legal/legal-background.png'
+import legalBackground from '../../assets/legal/legal-background.webp'
 
 
 function Privacy() {

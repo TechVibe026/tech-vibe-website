@@ -1,6 +1,6 @@
 import './Footer.css'
 
-import techVibeLogo from '../../assets/logo/tech-vibe-logo.png'
+import techVibeLogo from '../../assets/logo/tech-vibe-logo.webp'
 
 function Footer() {
   return (

@@ -1,8 +1,8 @@
 import './Projects.css'
 
-import mesaflow from '../../assets/projects/mesaflow.png'
-import cliniq from '../../assets/projects/cliniq.png'
-import nexaStore from '../../assets/projects/nexa-store.png'
+import mesaflow from '../../assets/projects/mesaflow.webp'
+import cliniq from '../../assets/projects/cliniq.webp'
+import nexaStore from '../../assets/projects/nexa-store.webp'
 
 function Projects() {
   return (
